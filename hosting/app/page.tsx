@@ -71,7 +71,7 @@ const BookSection = () => (
           <a href="https://www.amazon.com/dp/B0FWKQRFY9" target='_blank' rel="noopener noreferrer" itemProp="url">
             <Image
               src={"/30-days-plan-book-cover.png"}
-              alt="30 Days Plan Book Cover - Your Guide from Dream to Reality"
+              alt="30 Days Plan self-help book cover showing proven goal achievement system to stop procrastination and finish what you start in 30 days"
               width={300}
               height={450}
               className="rounded-xl shadow-2xl border-4 border-white"
@@ -108,7 +108,7 @@ const BookSection = () => (
             className="mt-6 inline-flex items-center px-8 py-3 border border-transparent text-base text-xl font-bold rounded-xl shadow-lg text-indigo-700 bg-yellow-300 hover:bg-yellow-400 transition duration-300 transform hover:scale-[1.05]"
           >
             Get Your Copy Today
-            <Image src={"/available-at-amazon-logo-stacked.png"} alt="Available at Amazon" width={200} height={100} className="ml-4" />
+            <Image src={"/available-at-amazon-logo-stacked.png"} alt="Buy 30 Days Plan book on Amazon - Available now as paperback and Kindle edition" width={200} height={100} className="ml-4" />
           </a>
 
           </div>
@@ -317,7 +317,7 @@ export default function App() {
     "name": "30 Days Plan: Your Guide from Dream to Reality",
     "author": {
       "@type": "Person",
-      "name": "Author Name"
+      "name": "Mark Thin"
     },
     "description": "Stop dreaming and start finishing with the 30 Days Plan. A strategic intervention against procrastination and burnout that proves you don't need endless willpower or 'perfect' days to succeed. Transform your goals into reality with focused consistency over thirty manageable days.",
     "isbn": "B0FWKQRFY9",
@@ -343,7 +343,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 font-sans antialiased" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen bg-gray-100 font-sans antialiased" id='hero' style={{ fontFamily: 'Inter, sans-serif' }}>
       {/* Structured Data for SEO */}
       <script
         type="application/ld+json"

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://30daysplan.com/sitemap.xml
 
 # Block common bot traps
 Disallow: /admin/
