@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://30daysplan.com/</loc>
+    <lastmod>2025-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://30daysplan.com/30-days-plan-book-cover.png</image:loc>
+      <image:title>30 Days Plan Book Cover</image:title>
+      <image:caption>Your Guide from Dream to Reality - Transform goals into results with focused consistency</image:caption>
+    </image:image>
+  </url>
+</urlset>
