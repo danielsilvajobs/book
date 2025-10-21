@@ -47,7 +47,7 @@ export const sendEmail = onRequest({ cors: ["https://30daysplan.com"] }, async (
 
     const mailOptions = {
         from: { name: "Mark Thin", address: "themarkthin@gmail.com" },
-        to: `themarkthin@gmail.com, ${req.body.email}`,
+        to: `themarkthin@gmail.com`, //, ${req.body.email}`,
         subject: "30 Days Plan - Contact Form",
         text: "Thank you for contact us, we will be in touch soon!",
         html: template.replace(/{{NAME}}/g, req.body.name)

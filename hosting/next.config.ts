@@ -4,8 +4,7 @@ const nextConfig = {
     unoptimized: true
   },
   // Enable compression
-  compress: true,
-  output: "export"
+  compress: true
 }
 
 export default nextConfig;
