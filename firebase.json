@@ -14,16 +14,5 @@
       ],
       "source": "functions"
     }
-  ],
-  "apphosting": {
-    "backendId": "my-web-app",
-    "rootDir": "hosting",
-    "ignore": [
-      "node_modules",
-      ".git",
-      "firebase-debug.log",
-      "firebase-debug.*.log",
-      "functions"
-    ]
-  }
+  ]
 }

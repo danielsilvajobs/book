@@ -1,8 +1,9 @@
-"use client"
-
-import React, { useState, useEffect } from 'react';
+import * as React from "react"
+import type { HeadFC, PageProps } from "gatsby"
+import { useState, useEffect } from 'react';
 import { BookOpen, Target, Clock, Send, CheckCircle, XCircle, Users } from 'lucide-react';
-import { ContactForm } from './components/ContactForm';
+import { ContactForm } from '../components/ContactForm';
+import { StaticImage } from "gatsby-plugin-image"
 
 // Content Definitions (Based on previous request)
 const BOOK_TITLE = "30 Days Plan";
@@ -68,7 +69,7 @@ function MetaTags() {
   );
 }
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard = ({ icon: Icon, title, description }: { icon: React.ComponentType<{ className?: string }>, title: string, description: string }) => (
   <article className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 transform hover:shadow-2xl transition duration-300">
     <div className="flex items-center space-x-4 mb-4">
       <div className="p-3 rounded-full bg-indigo-100 text-indigo-600" aria-hidden="true">
@@ -114,8 +115,8 @@ const BookSection = () => (
 
         <div className="flex justify-center lg:block lg:w-1/3 mb-10 lg:mb-0">
           <a href="https://www.amazon.com/dp/B0FWKQRFY9" target='_blank' rel="noopener noreferrer" itemProp="url">
-            <img
-              src={"/30-days-plan-book-cover.png"}
+            <StaticImage
+              src={"../images/30-days-plan-book-cover.png"}
               alt="30 Days Plan self-help book cover showing proven goal achievement system to stop procrastination and finish what you start in 30 days"
               width={300}
               height={450}
@@ -152,7 +153,7 @@ const BookSection = () => (
             className="mt-6 inline-flex items-center px-8 py-3 border border-transparent text-base text-xl font-bold rounded-xl shadow-lg text-indigo-700 bg-yellow-300 hover:bg-yellow-400 transition duration-300 transform hover:scale-[1.05]"
           >
             Get Your Copy Today
-            <img src={"/available-at-amazon-logo-stacked.png"} alt="Buy 30 Days Plan book on Amazon - Available now as paperback and Kindle edition" width={200} height={100} className="ml-4" />
+            <StaticImage src={"../images/available-at-amazon-logo-stacked.png"} alt="Buy 30 Days Plan book on Amazon - Available now as paperback and Kindle edition" width={220} height={105} className="ml-4" />
           </a>
 
           </div>
@@ -239,7 +240,7 @@ const DiscordCommunityBanner = () => (
   </section>
 );
 
-const FAQItem = ({ question, answer, isOpen, onClick }) => (
+const FAQItem = ({ question, answer, isOpen, onClick }: { question: string; answer: string; isOpen: boolean; onClick: () => void }) => (
   <div className="border border-gray-200 rounded-lg mb-4">
     <button
       className="w-full px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 rounded-lg hover:bg-gray-50 transition duration-200"
@@ -266,7 +267,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => (
 );
 
 const FAQSection = () => {
-  const [openFAQ, setOpenFAQ] = useState(null);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -303,7 +304,7 @@ const FAQSection = () => {
     }
   ];
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number | null) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
@@ -354,7 +355,7 @@ const FAQSection = () => {
   );
 };
 
-export default function App() {
+const IndexPage: React.FC<PageProps> = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Book",
@@ -385,7 +386,6 @@ export default function App() {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gray-100 font-sans antialiased" id='hero' style={{ fontFamily: 'Inter, sans-serif' }}>
       {/* Structured Data for SEO */}
@@ -410,5 +410,9 @@ export default function App() {
       </main>
       <Footer />
     </div>
-  );
+  )
 }
+
+export default IndexPage
+
+export const Head: HeadFC = () => <title>Home Page</title>
